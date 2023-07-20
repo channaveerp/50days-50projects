@@ -39,10 +39,10 @@ main {
   margin: 1rem;
   border-radius: 8px;
   position: relative;
+  overflow: hidden;
 }
 .movie > img {
-  width: 90%;
-  aspect-ratio: 1/1;
+  width: 100%;
 }
 .movieInfo {
   display: flex;
@@ -58,17 +58,23 @@ main {
   color: rgb(16, 21, 21);
   font-weight: bold;
 }
-
-.overView {
+.movieInfo h3 {
+  margin-top: 0;
+}
+.overview {
   background-color: white;
-  padding: 1rem;
   position: absolute;
   left: 0;
-  top: 0;
   bottom: 0px;
-  max-height: 100%;
+  right: 0;
+  padding: 1rem;
   transform: translateY(101%);
+  height: 100%;
+  opacity: 0.4;
+  transition: transform 0.4s ease;
+  color: #fff;
+  background-color: #151616;
 }
-.movie:hover .overView {
+.movie:hover .overview {
   transform: translateY(0);
 }
